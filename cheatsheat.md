@@ -36,7 +36,7 @@ Term | Description | Example
  Dir | Directory, Folder | 
  Webroot | Start path of a website | `/var/www/myproject` could be the webroot of the site myproject.something.com
 
-## Git comands
+## Git commands
 
 Action | Command | Notes
 ---------|----------|---------
