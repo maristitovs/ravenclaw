@@ -5,6 +5,9 @@
 Use | Command | Description
 ---------|----------|---------
  Change directory | `cd path/to/dir` | Lets you browse the directory tree 
+ Copy file | `cp path/to/copy/file path/to/destination/` | Copies a file
+ Copy directory | `cp -R path/to/copy/directory path/to/destination/` | Copies a directory to a different location
+ Move a file or directory | `mv path/to/source path/to/destination` | Moves a file or folder. Only real way to rename something in a terminal 
  Delete (Remove) | `rm path/to/delete` | Removes files Can remove lots of stuff at once
  Delete (Remove) directories | `rm -rf path/to/delete` | Removes files, folders recursively 
  Read end of file | `tail path/to/file` | Reads the last n (dedault 10) lines.
@@ -32,3 +35,14 @@ Term | Description | Example
  Relative path  | Starting from CURRENT DIR | If I am in `/var/log/apache2` but I need to read `/var/log/syslog` :`tail -f ../syslog`
  Dir | Directory, Folder | 
  Webroot | Start path of a website | `/var/www/myproject` could be the webroot of the site myproject.something.com
+
+## Git comands
+
+Action | Command | Notes
+---------|----------|---------
+ Add new element | `git add path/to/file` | if path is `.` every new file will be added
+ Create a commit | `git commit -a -m "Add commit message"` | -a parameter adds every change to the commit. 
+ Upload (push) commited changes to source  | `git push` | the source of the code is configured in the `.git` directory
+ Download (pull) latest changes from source | `git pull` | Don't forget to pull latest code before trying to push your changes
+ Change active branch | `git checkout branchname` | meow meow
+ Download a new project (clone) | `git clone git@github.com:maristitovs/ravenclaw.git` | substitute the address part with the project you wish to clone
