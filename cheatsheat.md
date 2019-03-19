@@ -49,7 +49,7 @@ cat howdy.txt
 
 ##### Purpose
 
-Append output of command before `>` to file after `>`, adding to the contents of the file
+Append output of command before `>>` to file after `>>`, adding to the contents of the file
 
 ##### Example
 A file called `howdy.txt` has some content
@@ -59,7 +59,7 @@ cat howdy.txt
     original text!
 ```
 
-If you echo a line and use > to pipe the output to the file
+If you echo a line and use `>>` to pipe the output to the file
 
 `echo "Howdy" >> howdy.txt`
 
