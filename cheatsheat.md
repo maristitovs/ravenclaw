@@ -16,6 +16,91 @@ Use | Command | Description
  Delete stuff | `apt remove package-name` | Removes a package from Ubuntu repositories
  Change file permissions | `chmod <permisions> path/to/file` | Changes permission of file or folder. Can use number [calculator](http://permissions-calculator.org/) or + and -
 
+### Special characters
+
+### Piping and redirection (https://ryanstutorials.net/linuxtutorial/piping.php)
+
+#### > (redirection)
+
+##### Purpose
+
+Write output of command before `>` to file after `>`, overwriting the contents of the file 
+
+##### Example
+A file called `howdy.txt` has some content
+
+```
+cat howdy.txt
+    original text!
+```
+
+If you echo a line and use > to pipe the output to the file
+
+`echo "Howdy" > howdy.txt`
+
+It will be overwritten by the output of the first command:
+
+```
+cat howdy.txt
+    Howdy
+```
+
+#### >> (redirection, but append)
+
+##### Purpose
+
+Append output of command before `>` to file after `>`, adding to the contents of the file
+
+##### Example
+A file called `howdy.txt` has some content
+
+```
+cat howdy.txt
+    original text!
+```
+
+If you echo a line and use > to pipe the output to the file
+
+`echo "Howdy" >> howdy.txt`
+
+It will be overwritten by the output of the first command:
+
+```
+cat howdy.txt
+    original text!
+    Howdy
+```
+
+#### | (pipe)
+
+##### Purpose
+
+Connect the standard output of command before the pipe `|` to the standard input for command after the pipe `|`
+
+##### Example
+
+A file called `howdy.txt` has some content
+
+```
+cat howdy.txt
+    Howdy 1
+    Howdy 2
+    Howdy 3
+    Howdy 4
+    Howdy 5
+```
+
+By cat-ing the file (showing contents to standard output) and piping to tail -n 3 (showing the last three lines), we can display only the last lines of the output of the cat command. 
+
+```
+cat howdy.txt | tail -n 3
+    Howdy 3
+    Howdy 4
+    Howdy 5
+```
+
+This example is useless, since tail does the same, but you get the general idea. 
+
 
 ### Paths
 
